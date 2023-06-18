@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>stayfit</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        .plus {
+            position: absolute;
+            top: 700px;
+            right: 200px;
+            z-index: 5;
+            font-size: 5em;
+            line-height: 100%;
+            transition: .2s ease;
+        }
+
+        a {
+            text-decoration-line: none;
+        }
+    </style>
+</head>
+
+<body class="is-preload homepage">
+    <div id="page-wrapper">
+
+        <!-- 헤더 -->
+        <div id="header-wrapper">
+            <header id="header" class="container">
+                <!-- 로고 -->
+                <div id="logo"><a href="index.html"><img src="images/logo.png" width="200" alt="stayfit"></a></div>
+
+                <!-- 메뉴 -->
+                <nav id="nav">
+                    <ul class="current">
+                        <li><a href="index.html">홈 화면</a></li>
+                        <li><a href="index.html">배틀</a>
+                            <ul class="submenu">
+                                <li><a href="battle4.html">배틀 찾기</a></li>
+                                <li><a href="battlefight.html">나의 배틀</a></li>
+                                <li><a href="Ranking.html">랭킹</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html">게시판</a>
+                            <ul class="submenu">
+                                <li><a href="자유게시판.html">자유 게시판</a></li>
+                                <li><a href="전문게시판.html">전문 게시판</a></li>
+                                <li><a href="파티게시판.html">파티 게시판</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html">공지</a>
+                            <ul class="submenu">
+                                <li><a href="전체공지.html">전체공지</a></li>
+                                <li><a href="지역운동정보.html">지역운동정보</a></li>
+                                <li><a href="FAQ.html">FAQ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+
+        <!-- 배너 -->
+        <div id="banner-wrapper">
+            <div id="banner" class="box container">
+                <div class="row">
+                    <div class="col-9 col-12-medium"> <!--프로필 사진 비율 1:1-->
+                        <!--<img src="images/photo_02.png" style="width: 100px; height:100px;"  alt="" />-->
+                        <img id="profilePhoto" style="width: 150px; height:150px;" a href="" alt="" />
+                        <h2>
+                            <div id="userName"></div>
+                        </h2>
+                        <h3>
+                            <div id="combinationResult"></div>
+                        </h3>
+                    </div>
+                    <div class="col-3 col-12-medium">
+                        <ul>
+                            <li><a href="myprofileset.html" class="button medium icon">프로필 수정</a></li>
+                            <li><a href="mydataset.html" class="button medium icon">개인정보 수정</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plus" style="float: right;"><a href="피드추가.html">
+                <font color="green" ;>+</font>
+            </a></div>
+
+        <!-- 피드창 -->
+        <div id="features-wrapper">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-2">
+                    </div>
+
+                    <div class="col-8">
+
+                        <!-- 박스 -->
+
+                        <section class="box feature">
+                            <a href="#" class="image featured"><img
+                                    src="https://t3.ftcdn.net/jpg/02/77/38/04/240_F_277380400_uXu7BdMn82SRpMRP7EOQToA48A7pvAFg.jpg"
+                                    style="width: 100%;" alt="" /></a>
+                            <div class="inner">
+                                <header>
+                                    <h2>홍길동 : 데드리프트 여기 맛도리네 #헬스장 #추천 #좋아요 환영 # 등조질분</h2>
+                                    <p>범스테드 : 오 여기 어디임?</p>
+                                    <p>이희원 : 여기 유명함</p>
+                                    <p>변지섭 : 그니까 어디냐고..</p>
+                                    <p>뷰리 : 와우!!!</p>
+                                    <p></p>
+                                </header>
+                                <!-- Inside each feed box -->
+
+                                <div class="inner">
+                                    <header>
+                                        <form class="comment-form">
+                                            <input type="text" class="comment-input" placeholder="댓글을 입력하세요..." />
+                                            <button type="submit" class="comment-submit">댓글 달기</button>
+                                        </form>
+                                    </header>
+                                </div>
+
+                            </div>
+
+                            <button class="like-button" onclick="likeButtonClick(this)">
+                                <span class="like-icon">&#x1F44D;</span>
+                                <span class="like-count">102</span>
+                            </button>
+                        </section>
+                    </div>
+
+                    <div class="col-2">
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-2">
+                    </div>
+
+                    <div class="col-8">
+                        <!-- 박스 -->
+                        <section class="box feature">
+                            <a href="#" class="image featured"><img
+                                    src="https://t3.ftcdn.net/jpg/04/23/91/60/240_F_423916000_fNKiDHNFPV2wTyEQvNrroSPexTuVi7qD.jpg"
+                                    style="width: 100%;" alt="" /></a>
+                            <div class="inner">
+                                <header>
+                                    <h2>이희원 : 오늘 챌린지해서 스쿼트로 이겼다 ㅎㅎㅎ 할 사람 구함 #운동대결 환영 # 스쿼트 잘함 </h2>
+                                    <p>김상영 : 스쿼트 몇침?</p>
+                                    <p>박지원 : 오오오! 나도 알려줘..!</p>
+                                    <p>이정규 : 멋있다.. 같이 운동 함 하자 ㅎㅎ</p>
+                                </header>
+
+                                <div class="inner">
+                                    <header>
+                                        <form class="comment-form">
+                                            <input type="text" class="comment-input" placeholder="댓글을 입력하세요..." />
+                                            <button type="submit" class="comment-submit">댓글 달기</button>
+                                        </form>
+                                    </header>
+                                </div>
+
+                            </div>
+                            <button class="like-button" onclick="likeButtonClick(this)">
+                                <span class="like-icon">&#x1F44D;</span>
+                                <span class="like-count">123</span>
+                            </button>
+                        </section>
+                    </div>
+
+                    <div class="col-2">
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-2">
+                    </div>
+
+                    <div class="col-8">
+
+                        <!-- 박스 -->
+                        <section class="box feature">
+                            <a href="#" class="image featured"><img
+                                    src="https://t4.ftcdn.net/jpg/00/65/08/69/240_F_65086972_5fHLomMR3ZGKzfmEiCS6s5U8JA53Fh9A.jpg"
+                                    style="width: 100%" alt="" /></a>
+                            <div class="inner">
+                                <header>
+                                    <h2>변지섭 : 오늘 벤치 1rm 100kg 달성했다! ㅎㅎㅎ #헬린이 탈출 #3대 400 목표 #점진적 과부화 #부상투혼 </h2>
+                                    <p>이희원 : 오 대박인데!!!</p>
+                                    <p>홍길동 : 100kg 폼 미쳤다 </p>
+                                    <p>로니 : 귀엽네 ㅎㅎㅎ</p>
+                                    <p>제임스 : ㅊㅊㅊ</p>
+                                </header>
+
+                                <div class="inner">
+                                    <header>
+
+                                        <form class="comment-form">
+                                            <input type="text" class="comment-input" placeholder="댓글을 입력하세요..." />
+                                            <button type="submit" class="comment-submit">댓글 달기</button>
+                                        </form>
+                                    </header>
+
+
+                                </div>
+                                <button class="like-button" onclick="likeButtonClick(this)">
+                                    <span class="like-icon">&#x1F44D;</span>
+                                    <span class="like-count">90</span>
+                                </button>
+                        </section>
+                    </div>
+
+                    <div class="col-2">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br></br><br><br>
+
+        <!-- 메인창 -->
+
+        <!-- 하단 -->
+        <div id="footer-wrapper" class="center">
+            <footer id="footer" class="container">
+
+                <!-- 하단정보 -->
+                <section class="widget contact last">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+                        <li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+                    </ul>
+                    <p>cheonan<br />
+                        Baekseok Univ.<br />
+                        010-0000-0000</p>
+                </section>
+
+                <div class="col-12">
+                    <div id="copyright">
+                        <ul class="menu">
+                            <li>&copy; Untitled. All rights reserved</li>
+                            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+
+    </div>
+
+    <!-- 스크립트 -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+
+        function likeButtonClick(button) {
+            var countElement = button.querySelector('.like-count');
+            var count = parseInt(countElement.textContent);
+            countElement.textContent = count + 1;
+        }
+
+
+        // 로컬 스토리지에서 조합 결과 가져오기
+        // Function to handle comment submission
+        function handleCommentSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the entered comment text
+            var commentInput = event.target.querySelector('.comment-input');
+            var commentText = commentInput.value.trim();
+
+            if (commentText !== '') {
+                // Create a new comment element
+                var commentElement = document.createElement('p');
+                commentElement.textContent = commentText;
+
+                // Append the comment to the feed box
+                var feedBox = event.target.closest('.box.feature');
+                feedBox.querySelector('header').appendChild(commentElement);
+
+                // Reset the comment input field
+                commentInput.value = '';
+            }
+        }
+
+        // Attach event listeners to all comment forms
+        var commentForms = document.querySelectorAll('.comment-form');
+        commentForms.forEach(function (form) {
+            form.addEventListener('submit', handleCommentSubmit);
+        });
+        const combinationResult = localStorage.getItem('combination');
+        if (combinationResult) {
+            document.getElementById("combinationResult").textContent = combinationResult;
+        } else {
+            document.getElementById("combinationResult").textContent = "(별명을 지어주세요.)";
+        }
+
+        const weightResult = localStorage.getItem('weight');
+        console.log(weightResult);
+        // 프로필 사진 지정하기
+        switch (weightResult) {
+            case ("1"):
+                document.getElementById("profilePhoto").src = "images/photo_01.png";
+                break;
+            case ("2"):
+                document.getElementById("profilePhoto").src = "images/photo_02.png";
+                break;
+            case ("3"):
+                document.getElementById("profilePhoto").src = "images/photo_03.png";
+                break;
+            default:
+                document.getElementById("profilePhoto").src = "images/photo_02.png";
+                break;
+        }
+        const userName = localStorage.getItem('name');
+        if (userName) {
+            document.getElementById("userName").textContent = userName + "님 환영합니다.";
+        } else {
+            document.getElementById("userName").textContent = "User님 환영합니다.";
+        }
+    </script>
+    function likeButtonClick(button) {
+    var countElement = button.querySelector('.like-count');
+    var count = parseInt(countElement.textContent);
+    countElement.textContent = count + 1;
+    }
+    </script>
+</body>
+
+</html>

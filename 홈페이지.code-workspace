@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../과제파일"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "홈페이지"
+	}
+}

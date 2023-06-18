@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>번개 모양과 헬스 배틀</title>
+    <style>
+        /* 번개 모양 */
+        body {
+            background-color: #009D71;
+            display: flex;
+            height: 90vh;
+            margin-top: 50px;
+        }
+
+        .cont {
+            margin: auto;
+        }
+
+        #th1 {
+            background: linear-gradient(-65deg, #000 40%, #00695C 80%);
+            border-bottom: 3px solid hsla(0, 0, 100, 0.7);
+            border-radius: 13px;
+            box-shadow: 3.2px 1px 0 hsla(0, 0, 100, 0.7);
+            height: 250px;
+            position: relative;
+            transform: skew(-20deg);
+            width: 150px;
+        }
+
+        #th1::after {
+            background: #009D71;
+            border-left: 3px solid hsla(0, 0, 100, 0.7);
+            content: '';
+            height: 250px;
+            left: 150px;
+            position: absolute;
+            top: 20px;
+            transform: rotatez(10deg);
+            transform-origin: top;
+            width: 50px;
+        }
+
+        #th2 {
+            background: linear-gradient(-65deg, #00695C 15%, #000 90%);
+            border-radius: 13px;
+            box-shadow: 3.1px 1px 0 hsla(0, 0, 100, 0.7);
+            height: 270px;
+            position: relative;
+            transform: skew(-20deg) translate3d(-20px, -50px, 0);
+            width: 150px;
+        }
+
+        #th2::after {
+            background: #009D71;
+            border-left: 3px solid hsla(0, 0, 100, 0.7);
+            content: '';
+            height: 293px;
+            left: 141px;
+            position: absolute;
+            top: 50px;
+            transform: skew(0) rotatez(29.2deg);
+            transform-origin: top;
+            width: 150px;
+        }
+
+        .left-profile {
+            position: absolute;
+            top: 30%;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .right-profile {
+            position: absolute;
+            top: 30%;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ccc;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .result-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .result {
+            font-size: 18px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div id="th1"></div>
+        <div id="th2"></div>
+    </div>
+    <div class="battle-container">
+        <div class="battle-line"></div>
+        <div class="left-profile">
+            <div class="profile-img"></div>
+            <div class="profile-name">MZ대표 오운완 마스터</div>
+            <div class="result-container">
+                <div class="result">승: <span id="leftWinCount">2</span></div>
+                <div class="result">무: <span id="leftDrawCount">0</span></div>
+                <div class="result">패: <span id="leftLoseCount">1</span></div>
+            </div>
+        </div>
+        <div class="right-profile">
+            <div class="profile-img"></div>
+            <div class="profile-name">Yeah buddy light weight baby</div>
+            <div class="result-container">
+                <div class="result">승: <span id="rightWinCount">1</span></div>
+                <div class="result">무: <span id="rightDrawCount">1</span></div>
+                <div class="result">패: <span id="rightLoseCount">3</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

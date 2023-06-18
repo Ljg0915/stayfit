@@ -1,0 +1,117 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>StayFit FAQ Page</title>
+</head>
+<head>
+  <style>
+    body {
+      font-family: 'Noto Sans Korean';
+      font-size: 20px;
+      background: #eaeaea;
+    }
+
+    .content {
+      width: 80%;
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    .centerplease {
+      margin: 0 auto;
+      max-width: 240px;
+      font-size: 45px;
+      margin-top: 25px;
+    }
+
+    /*Question*/
+    .question {
+      position: relative;
+      background: #f9f9f9;
+      margin: 20px;
+      padding: 10px 10px 10px 50px;
+      display: inline-block;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    /*Answer*/
+    .answers {
+      padding: 0px 15px;
+      margin: 5px 10px 5px 0;
+      width: 100% !important;
+      height: 0;
+      overflow: hidden;
+      z-index: ;
+      position: relative;
+      opacity: 0;
+      transition: .2s ease;
+    }
+
+    .questions:checked ~ .answers {
+      height: auto;
+      opacity: 1;
+      padding: 15px;
+      padding-left: 40px;
+    }
+
+    /*FAQ Toggle*/
+    .plus {
+      position: absolute;
+      margin-left: 30px;
+      margin-top: 20px;
+      z-index: 5;
+      font-size: 2em;
+      line-height: 100%;
+      transition: .2s ease;
+    }
+
+    .questions:checked ~ .plus {
+      transform: rotate(45deg);
+    }
+
+    .questions {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="centerplease">
+   StayFit FAQ
+  </div>
+  <br>
+  <div class="content">
+    <div>
+      <input type="checkbox" id="question1" name="q" class="questions">
+      <div class="plus">+</div>
+      <label for="question1" class="question">
+        신고 및 문의는 어떻게 해야 하나요?
+      </label>
+      <div class="answers">
+        홈페이지 공식 메일 계정으로 문의 내용을 보내시면 추후 확인 후 빠른 답변을 해드립니다.
+      </div>
+    </div>
+
+    <div>
+      <input type="checkbox" id="question2" name="q" class="questions">
+      <div class="plus">+</div>
+      <label for="question2" class="question">
+        왜 익명성이 아닌 실명제를 사용하나요?
+      </label>
+      <div class="answers">
+        익명성은 개인의 프라이버시가 강화된다는 장점이 있지만, 그와 동시에 인터넷 언어폭력 등의 문제가 야기될 수 있으므로 실명제를 사용합니다.
+      </div>
+    </div>
+
+    <div>
+      <input type="checkbox" id="question3" name="q" class="questions">
+      <div class="plus">+</div>
+      <label for="question3" class="question">
+        배틀 진행시에 목표 성공에 대한 것은 개인의 양심에 따라 하는 것인가요?
+      </label>
+      <div class="answers">
+        네, 맞습니다! 자기 관리는 철저한 본인의 의지와 양심에 따라 움직이는 것이기 때문에 저희는 이를 믿고 유저에게 맡기는 것입니다.
+      </div>
+    </div>
+  </div>
+</body>

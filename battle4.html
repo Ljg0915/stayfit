@@ -1,0 +1,273 @@
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>헬스 배틀</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 170px;
+            background-color: #f7f7f7;
+        }
+
+        .button {
+            font-size: 20px;
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #548CB4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+
+        .battle-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            width: 200px;
+            height: 200px;
+            background-color: #f2f2f2;
+            border-radius: 50%;
+            transition: box-shadow 0.3s ease;
+            box-shadow: 0 0 10px 5px #f2f2f2;
+        }
+
+        .battle-box::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: rgb(48, 8, 8);
+            mix-blend-mode: screen;
+            z-index: -1;
+            transform: scale(0.9) translateX(5%); /* 불의 크기를 조정 */
+        }
+
+        .battle-box:hover {
+            box-shadow: 0 0 10px 5px #00ff00;
+        }
+
+        .battle-box.active {
+            box-shadow: 0 0 10px 5px #ff0000;
+        }
+
+        .battle-text {
+            font-family: Arial, sans-serif;
+            font-size: 40px;
+            color: #000;
+            text-align: center; /* 글씨 정렬 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .fire {
+            font-size: 12px;
+            filter: blur(0.02em);
+            -webkit-filter: blur(0.02em);
+            margin: 3em auto auto 0;
+            position: relative;
+            width: 10em;
+            height: 12em;
+        }
+
+        .particle {
+            animation: rise 1s ease-in infinite;
+            background-image: radial-gradient(rgb(255, 80, 0) 20%, rgba(255, 80, 0, 0) 70%);
+            border-radius: 50%;
+            mix-blend-mode: screen;
+            opacity: 0;
+            position: absolute;
+            bottom: 0;
+            width: 5em;
+            height: 5em;
+        }
+
+        @keyframes rise {
+            from {
+                opacity: 0;
+                transform: translateY(0) scale(1);
+            }
+            25% {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-10em) scale(0);
+            }
+        }
+
+        .popup-container {
+            position: relative;
+            padding: 50px;
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .popup-container .button {
+            margin-top: 10px;
+        }
+
+        .popup-checkbox {
+            display: none;
+            position: relative;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup-checkbox h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .popup-checkbox label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .popup-checkbox input[type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <div class="popup-container">
+            <button class="button" onclick="openSettings('duration')">기간 설정</button>
+            <div class="popup-checkbox" id="durationPopup">
+                <h2>기간 설정</h2>
+                <label>
+                    <input type="radio" name="duration" value="1" checked>
+                    1주
+                </label>
+                <label>
+                    <input type="radio" name="duration" value="2">
+                    2주
+                </label>
+                <label>
+                    <input type="radio" name="duration" value="3">
+                    3주
+                </label>
+                <button class="button" onclick="closeSettings('duration')">완료</button>
+            </div>
+        </div>
+
+        <div class="battle-box">
+            <div class="fire">
+                <script>
+                    var parts = 50;
+                    for (var i = 0; i < parts; i++) {
+                        var particle = document.createElement('div');
+                        particle.classList.add('particle');
+                        particle.style.animationDelay = Math.random() + 's';
+                        particle.style.left = (i / parts) * 100 + '%';
+                        document.querySelector('.fire').appendChild(particle);
+                    }
+                </script>
+               
+            </div>
+        </div>
+
+        <div class="popup-container">
+            <button class="button" onclick="openSettings('goal')">목표 설정</button>
+            <div class="popup-checkbox" id="goalPopup">
+                <h2>목표 설정</h2>
+                <label>
+                    <input type="radio" name="goal" value="밥 사주기(찐친 추천)">
+                    밥 사주기(찐친 추천)
+                </label>
+                <label>
+                    <input type="radio" name="goal" value="술 사주기(찐친 추천)">
+                    술 사주기(찐친 추천)
+                </label>
+                <label>
+                    <input type="radio" name="goal" value="소원 들어주기">
+                    소원 들어주기
+                </label>
+                <label>
+                    <input type="radio" name="goal" value="하루종일 노예 하기">
+                    하루종일 노예 하기
+                </label>
+                <label>
+                    <input type="radio" name="goal" value="번호 따고 오기(극악)">
+                    번호 따고 오기(극악)
+                </label>
+                <label>
+                    <input type="radio" name="goal" value="커피 사주기">
+                    커피 사주기
+                </label>
+                <button class="button" onclick="closeSettings('goal')">완료</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openSettings(type) {
+            if (type === 'duration') {
+                document.getElementById('durationPopup').style.display = 'block';
+            } else if (type === 'goal') {
+                document.getElementById('goalPopup').style.display = 'block';
+            }
+        }
+
+        function closeSettings(type) {
+            if (type === 'duration') {
+                document.getElementById('durationPopup').style.display = 'none';
+            } else if (type === 'goal') {
+                document.getElementById('goalPopup').style.display = 'none';
+            }
+
+            checkBattleReady();
+        }
+
+        function checkBattleReady() {
+            const duration = document.querySelector('input[name="duration"]:checked');
+            const goal = document.querySelector('input[name="goal"]:checked');
+
+            if (duration && goal) {
+                document.querySelector('.battle-box').classList.add('active');
+            } else {
+                document.querySelector('.battle-box').classList.remove('active');
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const battleBox = document.querySelector('.battle-box');
+            battleBox.addEventListener('click', function() {
+                const isActive = battleBox.classList.contains('active');
+
+                if (isActive) {
+                    // 배틀 창으로 넘어가는 로직 구현
+                    window.location.href = "매칭완료.html"; 
+                } else {
+                    console.log('Please try again.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

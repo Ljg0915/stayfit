@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>계정생성 페이지</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      width: 300px;
+      height: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-box input[type="name"],
+    .login-box input[type="text"],
+    .login-box input[type="password"],
+    .login-box input[type="passwordcheck"] {
+      width: 92.5%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .login-box input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-box input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="login-box">
+      <h2>사용자 생성</h2>
+      <form>
+        <input type="name" name="realname" placeholder="이름" required>
+        <input type="text" name="username" placeholder="아이디" required>
+        <input type="password" name="password" placeholder="비밀번호" required>
+        <input type="passwordcheck" name="passwordcheck" placeholder="비밀번호 재입력" required>
+        <input type="submit" onclick="makeAccount()" value="사용자 생성">
+      </form>
+    </div>
+  </div>
+</body>
+<script>
+  function makeAccount() {
+    const realname = document.getElementsByName("realname").value; 
+    const username = document.getElementsByName("username").value;
+    const password = document.getElementsByName("password").value;
+    const passwordcheck = document.getElementsByName("passwordcheck").value;
+
+   if (realname == NULL && username == NULL && password == NULL && passwordcheck == NULL) {
+   }else{
+      alert('요청을 처리하는 과정에서 오류가 발생했습니다. 잠시후 다시 시도해 주십시오.');
+   }
+  }
+  
+</script>
+</html>

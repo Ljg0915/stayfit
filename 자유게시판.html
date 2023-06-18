@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stayfit-자유게시판</title>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        
+        boa {text-decoration-line: none;}dy {padding : 15px;}
+       #tbl2 {position: relative; top: 20px;}
+    </style>
+    <link rel="stylesheet" href="게시판.css" />
+</head>
+<body>
+    <div style="width:20%; float:left;">
+	<table id = "tbl1" border="1">
+        <tr>
+			<td rowspan="4">
+				<div style="background-color: #c5f0c1; padding: 10px; height: 100vh;">
+					<h1>게시판 관리</h1><br>
+					<ul style="list-style-type: none; margin: 0; padding: 0;">
+                        <li><button type="button" onclick="location.href='index.html'">HOME</button><br><br></li>
+						<li><button type="button" onclick="location.href='자유글쓰기.html'">글 등록</button><br><br></li>
+                        <div class="dropdown">
+                            <button class="dropbtn"> 
+                              <span class="dropbtn_icon">more_horiz</span>
+                              게시판을 선택하세요
+                            </button>
+                            <div class="dropdown-content">
+                              <a href="자유게시판.html">자유게시판</a>
+                              <a href="전문게시판.html">전문게시판</a>
+                              <a href="파티게시판.html">파티게시판</a>
+                            </div>
+                        </div>
+					</ul>
+				</div>
+			</td>
+		</tr>
+    </table>
+    </div>
+    <div style="width:80%; float:right; position:static;">
+    <table id = "tbl2" border="1" style="background-color: #eee; height: 100px;">
+            <tr><th>게시판</th></tr>
+            <tr>
+                <th align="center">번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="">자유게시판 이용 안내</a></td>
+                <td>관리자</td>
+                <td>2023-06-04</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="#">3대 400 달성!</a></td>
+                <td>홍길동</td>
+                <td>2023-06-05</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="#">자세 봐주세요</a></td>
+                <td>성춘향</td>
+                <td>2023-06-07</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="#">살이 잘 안 빠져ㅠㅠ</a></td>
+                <td>김뷰리</td>
+                <td>2023-06-07</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="#">헬스장 추천 받아요</a></td>
+                <td>이뷰리</td>
+                <td>2023-06-07</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="#">오늘의 식단!</a></td>
+                <td>박뷰리</td>
+                <td>2023-06-08</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="#">닭가슴살 브랜드 추천해줘</a></td>
+                <td>쀼리</td>
+                <td>2023-06-10</td>
+            </tr>
+	</table>
+    </div>
+</body>
+</html>

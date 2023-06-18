@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>로그인 페이지</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      width: 300px;
+      /*height:*/ 
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 92.5%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .login-box input[type="button"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #4caf50;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-box input[type="button"]:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <h2>사용자 로그인</h2>
+      <form>
+        <input id="myId" type="text" name="id" placeholder="아이디" required>
+        <input id="myPassword" type="password" name="password" placeholder="비밀번호" required>
+        <input type="button" value="로그인" onClick="login()">
+        <input type="button" value="계정 생성" onClick="location.href='createaccount.html'">
+      </form>
+    </div>
+  </div>
+</body>
+<script>
+  function login() {
+    const ID = document.getElementById("myId").value;
+    const PASSWORD = document.getElementById("myPassword").value;
+    console.log(ID);
+    console.log(PASSWORD);
+    if (ID=="User" && PASSWORD=="1234") {
+      location.href='index.html';
+    } else {
+      window.alert("아이디와 비밀번호를 올바르게 입력해주세요.");
+    }
+  }
+</script>
+</html>

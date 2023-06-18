@@ -1,0 +1,79 @@
+/* ranking.css 파일 */
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    color: rgb(45, 27, 27);
+    background-color: #f7f7f7;
+}
+  
+  .container > header {
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .container > header h1 {
+    font-weight: 600;
+    font-size: 3em;
+    margin: 0;
+  }
+  
+  .wrapper {
+    line-height: 1.5em;
+    margin: 0 auto;
+    padding: 2em 0 3em;
+    width: 90%;
+    max-width: 2000px;
+    overflow: hidden;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+  }
+  
+  th {
+    background-color: #e9e9e9;
+    font-weight: bold;
+    color: black;
+    white-space: nowrap;
+  }
+  
+  td, th {
+    padding: 1em 1.5em;
+    text-align: left;
+  }
+  
+  tbody th {
+    background-color: #2ea879;
+  }
+  
+  tbody tr:nth-child(2n-1) {
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+  }
+  
+  tbody tr:hover {
+    background-color: rgba(50, 98, 149, .3);
+  }
+  
+  td.rank {
+    text-transform: capitalize;
+  }
+  
+  tbody tr:nth-child(1) {
+    background-color: #CCBA78;
+   
+  }
+  
+  tbody tr:nth-child(2) {
+    background-color: #C1C4C7;
+   
+  }
+  
+  tbody tr:nth-child(3) {
+    background-color: #E29A3F;
+    
+  }
+  
+  

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>나의 별명 만들기</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        #hiddenButton {
+            display: none;
+            margin-top: 20px;
+            width: 20%;
+            padding: 10px;
+            background-color: #4caf50;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #login-box input[type="submit"] {
+        display: none;
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>별명을 지어주세요</h1>
+    <select id="word1">
+        <option value="">-- 첫 번째 단어 선택 --</option>
+        <option value="성실한">성실한</option>
+        <option value="게으른">게으른</option>
+        <option value="힘이 넘치는">힘이 넘치는</option>
+        <option value="잠이 많은">잠이 많은</option>
+        <option value="아직도">아직도</option>
+        <option value="숙련된">숙련된</option>
+        <option value="내가 바로">내가 바로</option>
+    </select>
+    
+    <select id="word2">
+        <option value="">-- 두 번째 단어 선택 --</option>
+        <option value="초심자">초심자</option>
+        <option value="프로">프로</option>
+        <option value="운동광">운동광</option>
+        <option value="돼지">돼지</option>
+        <option value="타입">타입</option>
+        <option value="노력러">노력러</option>
+        <option value="첫걸음">첫걸음</option>
+    </select>
+    
+    <button onclick="combineWords()">조합하기</button>
+    <br><br>
+    <div id="text"></div>
+
+    <button id="hiddenButton" onclick="wordOutput()">별명 선택하기</button>
+    
+    <script>
+        localStorage.clear();
+
+        function combineWords() {
+            const word1 = document.getElementById("word1").value;
+            const word2 = document.getElementById("word2").value;
+            const result = word1 + " " + word2;
+            if (word1 && word2) {
+                document.getElementById("text").textContent = result;
+                document.getElementById("hiddenButton").style.display = 'inline'
+            } else {
+                document.getElementById("text").textContent = "단어를 모두 선택해주세요.";
+                document.getElementById("hiddenbutton").style.display = 'none'
+            }
+        }
+
+        function wordOutput() {
+            const word1 = document.getElementById("word1").value;
+            const word2 = document.getElementById("word2").value;
+            const result = word1 + " " + word2;
+            localStorage.setItem('combination' , result);
+            // 결과를 포함한 새로운 페이지로 이동하기
+            window.location.href = "index.html";
+        }
+
+    </script>
+</body>
+</html>
